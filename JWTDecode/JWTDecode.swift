@@ -124,11 +124,16 @@ public struct Claim {
         }
         return nil
     }
-
-        /// value of the claim as [String: Any]
-    public var dictionary: [String: Any]? {
-        return value as? [String: Any]
-    }
+	
+	/// value of the claim as [String: Any]
+	public var dictionary: [String: Any]? {
+		return value as? [String: Any]
+	}
+	
+	/// value of the claim as an array of [String: Any]
+	public var dictionaryArray: [[String: Any]]? {
+		return value as? [[String: Any]]
+	}
 }
 
 private func base64UrlDecode(_ value: String) -> Data? {
